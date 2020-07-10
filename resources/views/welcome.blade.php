@@ -1,100 +1,67 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('layouts.app')
 
-        <title>Laravel</title>
-
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Nunito', sans-serif;
-                font-weight: 200;
-                height: 100vh;
-                margin: 0;
-            }
-
-            .full-height {
-                height: 100vh;
-            }
-
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
-
-            .position-ref {
-                position: relative;
-            }
-
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
-            .content {
-                text-align: center;
-            }
-
-            .title {
-                font-size: 84px;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 13px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
-                        @endif
-                    @endauth
-                </div>
-            @endif
-
-            <div class="content">
-                <div class="title m-b-md">
-                    Laravel
-                </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://vapor.laravel.com">Vapor</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
+@section('content')
+    <div class="hero-image">
+        <div class="container">
+            <div class="hero-image__text">
+                <h1>Teach & Learn</h1>
+                <p class="mt-3">Best place to teach others and learn from thousand experts from meny fields and languages</p>
             </div>
         </div>
-    </body>
-</html>
+        <img src="./img/undraw_teaching_f1cm.svg" alt="">
+    </div>
+
+    <div class="container">
+        <section class="fdb-block">
+            <div class="container">
+              <div class="row text-lg-right align-items-center">
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <h3>Instructor</h3>
+                    <img alt="image" class="fdb-icon" src="./imgs/icons/gift.svg">
+                    <h4><strong>Feature One</strong></h4>
+                    <p>Far far away, behind the word mountains is hope.</p>
+            
+                    <img alt="image" class="fdb-icon mt-3 mt-xl-5" src="./imgs/icons/layers.svg">
+                    <h4><strong>Feature Two</strong></h4>
+                    <p>On her way she met a copy of the Little Blind Text.</p>
+            
+                    <img alt="image" class="fdb-icon mt-3 mt-xl-5" src="./imgs/icons/map.svg">
+                    <h4><strong>Feature Three</strong></h4>
+                    <p>Even the all-powerful has no control about the blind texts</p>
+                    
+                </div>
+            
+                <div class="col-12 col-sm-6 col-lg-3 text-left pt-3 pt-sm-0 order-lg-12">
+                    <h3>Students</h3>
+                    
+                    <img alt="image" class="fdb-icon" src="./imgs/icons/map-pin.svg">
+                    <h4><strong>Feature Four</strong></h4>
+                    <p>Duden flows by their place, behind the word mountains.</p>
+            
+                    <img alt="image" class="fdb-icon mt-3 mt-xl-5" src="./imgs/icons/package.svg">
+                    <h4><strong>Feature Five</strong></h4>
+                    <p>Separated they live in Bookmark right at the coast</p>
+            
+                    <img alt="image" class="fdb-icon mt-3 mt-xl-5" src="./imgs/icons/monitor.svg">
+                    <h4><strong>Feature Six</strong></h4>
+                    <p>A small river named Duden flows by their place and supplies it</p>
+                </div>
+            
+                <div class="col-7 col-sm-4 col-lg-4 m-auto pt-5 pt-lg-0 order-lg-1">
+                    <img alt="image" class="img-fluid" src="./img/undraw_Graduation_ktn0.svg">
+                </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <section class="fdb-block bg-dark fdb-viewport" >
+        <div class="container align-items-center justify-content-center d-flex">
+          <div class="row justify-content-center text-center">
+            <div class="col-12 col-md-10 col-lg-8">
+              <h3>Join our community and gain its perks today</h3>
+              <p class="mt-5"><a href="https://www.froala.com" class="btn btn-outline-light">Register Now</a></p>
+            </div>
+          </div>
+        </div>
+      </section>
+@endsection
